@@ -18,6 +18,7 @@ class FileTest {
         file.add("var0");
         file.add("var1");
         file.add("var2");
+
     }
 
     @Test
