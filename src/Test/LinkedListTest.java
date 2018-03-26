@@ -33,9 +33,10 @@ class LinkedListTest {
 
     @Test
     void remove() {
+        linkedList.remove(0);
         linkedList.remove(1);
-        assertEquals("var0",linkedList.get(0));
-        assertEquals("var2",linkedList.get(1));
+        assertEquals("var1",linkedList.get(0));
+        assertEquals(null,linkedList.get(1));
         assertEquals(null,linkedList.get(2));
     }
 

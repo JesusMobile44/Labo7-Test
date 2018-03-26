@@ -44,7 +44,10 @@ public class LinkedList<T> implements List<T> {
     }
     public void remove(int index){
         int i=0;
-        if (index>tailleListe){
+        if (index==0){
+            head=head.getNext();
+        }
+        else if (index>tailleListe){
             System.out.println("Il est impossible de créer dans cette position");
         }
         else if (index==tailleListe){
