@@ -24,7 +24,7 @@ public class LinkedList<T> implements List<T> {
     }
     public void add(int index,T contenue){
         int i=0;
-        if (index>tailleListe){
+        if (index>tailleListe||index<0){
             System.out.println("Il est impossible de créer dans cette position");
         }
         else if (index==tailleListe){
@@ -71,7 +71,7 @@ public class LinkedList<T> implements List<T> {
     }
     public T get(int index){
         int i=0;
-        if (index>tailleListe){
+        if (index>=tailleListe||index<0){
             System.out.println("Il est impossible de créer dans cette position");
             return null;
         }
