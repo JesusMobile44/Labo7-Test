@@ -40,7 +40,6 @@ public class LinkedList<T> implements List<T>{
         }
         tailleListe++;
     }
-
     public void remove(int index){
         int i=0;
         if (index>tailleListe){
