@@ -1,7 +1,9 @@
+package Collection;
+
 /**
  * Created by BelSi1731422 on 2018-03-19.
  */
-public class LinkedList<T> implements List<T>{
+public class LinkedList<T> implements List<T> {
 
     private Node head;
     private Node tail;

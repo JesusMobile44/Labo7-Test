@@ -1,3 +1,5 @@
+package Collection;
+
 /**
  * Created by BelSi1731422 on 2018-03-19.
  */
@@ -16,7 +18,7 @@ public class ArrayList<T> implements List<T> {
         tailleListe++;
     }
     public void add(int index,T contenue){
-        if (index>tailleListe){
+        if (index>tailleListe||index<0){
             System.out.println("Il est impossible de créer dans cette position");
         }
         else if (index==tailleListe){
@@ -42,18 +44,25 @@ public class ArrayList<T> implements List<T> {
         tableau = tableau2;
     }
     public void set(int index,T contenue){
-        if (index>=tailleListe){
+        if (index>=tailleListe||index<0){
             System.out.println("Il est impossible de remplacer dans cette position");
         }
-        else if (index<tailleListe){
+        else{
             tableau[index]=contenue;
         }
     }
     public T get(int index){
-        return tableau[index];
+        if (index>=tailleListe||index<0){
+            System.out.println("Il est impossible de prendre cette position");
+            return null;
+        }
+           else{
+            return tableau[index];
+        }
+
     }
     public void remove(int index){
-        if (index>=tailleListe){
+        if (index>=tailleListe||index<0){
             System.out.println("Il est impossible de supprimer dans cette position");
         }
         else if (index<tailleListe){
@@ -70,10 +79,11 @@ public class ArrayList<T> implements List<T> {
     }
     public void clear(){
         for (int i=0;i<tailleListe;i++){
-            remove(0);
+            tailleListe=0;
+            /*remove(0);
             if (i==(tailleListe-1)){
                 tailleListe=0;
-            }
+            }*/
         }
     }
     public int size(){
